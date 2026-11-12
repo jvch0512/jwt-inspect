@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "jwt-inspect"
+version = "0.1.0"
+description = "Offline JWT decoder and auditor: alg none, weak HMAC secrets, jku/kid abuse, claims and lifetime checks"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=7"]
+
+[project.scripts]
+jwt-inspect = "jwt_inspect.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
